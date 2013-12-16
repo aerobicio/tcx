@@ -15,8 +15,8 @@ build:
         echo "from location $(which ruby)"
         echo -p "gem list: $(gem list)"
 
-    after-steps:
-      - hipchat-notify:
-          token: $HIPCHAT_TOKEN
-          room-id: $HIPCHAT_ROOM_ID
-          from-name: Wercker
+  after-steps:
+    - hipchat-notify:
+        token: $HIPCHAT_TOKEN
+        room-id: $HIPCHAT_ROOM_ID
+        from-name: Wercker
