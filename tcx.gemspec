@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Tcx::VERSION
   spec.authors       = ["Gareth Townsend"]
   spec.email         = ["gareth.townsend@me.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{A gem for parsing TCX files}
+  spec.summary       = %q{A gem for parsing TCX files}
   spec.homepage      = ""
   spec.license       = "MIT"
 
