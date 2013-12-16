@@ -1,7 +1,7 @@
 box: wercker/ruby
 # Build definition
 build:
-# The steps that will be executed on build
+  # The steps that will be executed on build
   steps:
     # A step that executes `bundle install` command
     - bundle-install
