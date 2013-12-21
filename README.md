@@ -1,8 +1,7 @@
 # Tcx
 
+[![wercker status](https://app.wercker.com/status/ff43412c79e815300f76afd2d6b7d029 "wercker status")](https://app.wercker.com/project/bykey/ff43412c79e815300f76afd2d6b7d029)
 [![Code Climate](https://codeclimate.com/repos/52aecf0fc7f3a32702012fce/badges/5d30eb69936e693d8ffa/gpa.png)](https://codeclimate.com/repos/52aecf0fc7f3a32702012fce/feed)
-
-[![wercker status](https://app.wercker.com/status/ff43412c79e815300f76afd2d6b7d029/m "wercker status")](https://app.wercker.com/project/bykey/ff43412c79e815300f76afd2d6b7d029)
 
 TODO: Write a gem description
 
