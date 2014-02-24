@@ -8,12 +8,14 @@ module Tcx
       Ox.sax_parse(@handler, io)
     end
 
+    # In milliseconds to provide the same interface as FIT.
     def active_duration
-      @active_duration ||= @handler.laps.inject(0) { |k,v| k + v.total_time_seconds }
+      total_time_in_seconds * 100
     end
 
+    # In cm to provide the same interface as FIT.
     def distance
-      @distance ||= @handler.laps.inject(0) { |k,v| k + v.distance_meters }
+      total_distance_in_meters * 100
     end
 
     def start_time
@@ -21,7 +23,17 @@ module Tcx
     end
 
     def end_time
-      start_time + active_duration
+      start_time + total_time_in_seconds
+    end
+
+    private
+
+    def total_time_in_seconds
+      @total_time_in_seconds ||= @handler.laps.inject(0) { |k,v| k + v.total_time_seconds }
+    end
+
+    def total_distance_in_meters
+      @total_distance_in_meters ||= @handler.laps.inject(0) { |k,v| k + v.distance_meters }
     end
   end
 
