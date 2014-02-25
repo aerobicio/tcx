@@ -7,13 +7,13 @@ describe Tcx::TcxFile do
   describe "#active_duration" do
     subject { tcx_file.active_duration }
 
-    it { should == 2325.0200000 }
+    it { should == 232502.00000 }
   end
 
   describe "#distance" do
     subject { tcx_file.distance }
 
-    it { should == 8348.5039063 }
+    it { should == 834850.39063 }
   end
 
   describe "#start_time" do
