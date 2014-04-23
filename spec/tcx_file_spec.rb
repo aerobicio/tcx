@@ -16,6 +16,12 @@ describe Tcx::TcxFile do
     it { should == 834850.39063 }
   end
 
+  describe "#sport" do
+    subject { tcx_file.sport }
+
+    it { should == "RUNNING" }
+  end
+
   describe "#start_time" do
     subject { tcx_file.start_time }
 
