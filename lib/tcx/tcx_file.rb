@@ -26,6 +26,10 @@ module Tcx
       start_time + total_time_in_seconds
     end
 
+    def sport
+      @handler.sport
+    end
+
     private
 
     def total_time_in_seconds
@@ -43,6 +47,7 @@ module Tcx
     end
 
     attr_reader :laps
+    attr_reader :sport
 
     def initialize
       @laps = []
@@ -50,6 +55,8 @@ module Tcx
 
     def start_element(name)
       case name
+      when :Activity
+        @activity = true
       when :Lap
         @lap = Lap.new
       when :TotalTimeSeconds
@@ -72,7 +79,13 @@ module Tcx
     end
 
     def attr(name, value)
-      if @lap
+      if @activity
+        case name
+        when :Sport
+          @sport = value.upcase
+          @activity = nil
+        end
+      elsif @lap
         case name
         when :StartTime
           @lap.start_time = value
