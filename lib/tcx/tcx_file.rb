@@ -10,7 +10,7 @@ module Tcx
 
     # In milliseconds to provide the same interface as FIT.
     def active_duration
-      total_time_in_seconds * 100
+      total_time_in_seconds * 1000
     end
 
     # In cm to provide the same interface as FIT.
